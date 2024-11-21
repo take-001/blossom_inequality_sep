@@ -10,7 +10,7 @@ int revised_blossom_loop(int ncount, int ecount, int *elist, double *x, int sile
     int rval = 0;
     int cutcount, cut_added;
     int inside = 0, outside = 0;
-    int num_loop = 1; // Number of outer loops for separation routines
+    int num_loop = 10; // Number of outer loops for separation routines
     CCtsp_lpcut_in *cuts = NULL;
 
     // Validate input
@@ -21,8 +21,6 @@ int revised_blossom_loop(int ncount, int ecount, int *elist, double *x, int sile
 
     printf("Debug: Input Validation Passed\n");
     printf("Debug: ncount = %d, ecount = %d\n", ncount, ecount);
-
-
 
     do {
         do {
@@ -39,6 +37,29 @@ int revised_blossom_loop(int ncount, int ecount, int *elist, double *x, int sile
 
             if (cutcount) {
                 cut_added += cutcount;
+                printf("Debug: Printing Fast Blossom Cuts\n");
+                CCtsp_lpcut_in *current_cut = cuts;
+                while (current_cut) {
+                    printf("Cut Handle:\n");
+                    for (int i = 0; i < current_cut->cliques[0].segcount; i++) {
+                        printf("[%d, %d] ", 
+                               current_cut->cliques[0].nodes[i].lo, 
+                               current_cut->cliques[0].nodes[i].hi);
+                    }
+                    printf("\n");
+
+                    printf("Cut Teeth:\n");
+                    for (int t = 1; t < current_cut->cliquecount; t++) {
+                        printf("  Tooth %d: ", t);
+                        for (int i = 0; i < current_cut->cliques[t].segcount; i++) {
+                            printf("[%d, %d] ", 
+                                   current_cut->cliques[t].nodes[i].lo, 
+                                   current_cut->cliques[t].nodes[i].hi);
+                        }
+                        printf("\n");
+                    }
+                    current_cut = current_cut->next;
+                }
             }
 
             // Groetschel-Holland Fast Blossoms
@@ -52,6 +73,29 @@ int revised_blossom_loop(int ncount, int ecount, int *elist, double *x, int sile
 
             if (cutcount) {
                 cut_added += cutcount;
+                printf("Debug: Printing Groetschel-Holland Fast Blossom Cuts\n");
+                CCtsp_lpcut_in *current_cut = cuts;
+                while (current_cut) {
+                    printf("Cut Handle:\n");
+                    for (int i = 0; i < current_cut->cliques[0].segcount; i++) {
+                        printf("[%d, %d] ", 
+                               current_cut->cliques[0].nodes[i].lo, 
+                               current_cut->cliques[0].nodes[i].hi);
+                    }
+                    printf("\n");
+
+                    printf("Cut Teeth:\n");
+                    for (int t = 1; t < current_cut->cliquecount; t++) {
+                        printf("  Tooth %d: ", t);
+                        for (int i = 0; i < current_cut->cliques[t].segcount; i++) {
+                            printf("[%d, %d] ", 
+                                   current_cut->cliques[t].nodes[i].lo, 
+                                   current_cut->cliques[t].nodes[i].hi);
+                        }
+                        printf("\n");
+                    }
+                    current_cut = current_cut->next;
+                }
             }
 
             // Exact Blossoms
@@ -65,6 +109,29 @@ int revised_blossom_loop(int ncount, int ecount, int *elist, double *x, int sile
 
             if (cutcount) {
                 cut_added += cutcount;
+                printf("Debug: Printing Exact Blossom Cuts\n");
+                CCtsp_lpcut_in *current_cut = cuts;
+                while (current_cut) {
+                    printf("Cut Handle:\n");
+                    for (int i = 0; i < current_cut->cliques[0].segcount; i++) {
+                        printf("[%d, %d] ", 
+                               current_cut->cliques[0].nodes[i].lo, 
+                               current_cut->cliques[0].nodes[i].hi);
+                    }
+                    printf("\n");
+
+                    printf("Cut Teeth:\n");
+                    for (int t = 1; t < current_cut->cliquecount; t++) {
+                        printf("  Tooth %d: ", t);
+                        for (int i = 0; i < current_cut->cliques[t].segcount; i++) {
+                            printf("[%d, %d] ", 
+                                   current_cut->cliques[t].nodes[i].lo, 
+                                   current_cut->cliques[t].nodes[i].hi);
+                        }
+                        printf("\n");
+                    }
+                    current_cut = current_cut->next;
+                }
             }
 
         } while (cut_added > 0);
@@ -83,8 +150,8 @@ CLEANUP:
 
 // Main Function
 int main(int argc, char **argv) {
-    int ncount = 500; // Example: 50 nodes
-    int ecount = 1000; // Example: 100 edges
+    int ncount = 50; // Example: 50 nodes
+    int ecount = 100; // Example: 100 edges
 
     // Dynamically allocate edge list and fractional values
     int *elist = malloc(2 * ecount * sizeof(int));
