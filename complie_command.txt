@@ -1,0 +1,7 @@
+**compile command
+gcc -o blossom_build/blossom_detector blossom_detector.c -I INCLUDE /home/cvdg/Desktop/concorde/concorde_build/concorde.a -lm
+
+**segment error detection
+gdb ./blossom_build/blossom_detector
+run
+
