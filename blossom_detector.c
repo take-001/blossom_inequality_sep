@@ -7,14 +7,14 @@
 
 // Function Prototypes
 int revised_blossom_loop(int ncount, int ecount, int *elist, double *x, int silent, CCrandstate *rstate);
-void print_cuts(CCtsp_lpcut_in *cuts);
+void verify_and_print_comb(CCtsp_lpcut_in *cuts, int ncount, int ecount, int *elist, double *x);
 void free_cuts(CCtsp_lpcut_in *cuts);
 void generate_fractional_solution(int ncount, int ecount, int *elist, double *x);
 
 // Main Function
 int main(int argc, char **argv) {
-    int ncount = 10; // Number of nodes
-    int ecount = ncount*(ncount)-1; // Number of edges for 2-regular graph
+    int ncount = 400; // Number of nodes
+    int ecount = ncount * (ncount - 1) / 2; // Number of edges for a complete graph
 
     // Dynamically allocate edge list and fractional values
     int *elist = malloc(2 * ecount * sizeof(int));
@@ -27,17 +27,11 @@ int main(int argc, char **argv) {
     // Generate edge list and fractional values ensuring constraints
     generate_fractional_solution(ncount, ecount, elist, x);
 
-    // Print generated edges and fractional values
-    printf("Generated Edge List and Fractional Values:\n");
-    for (int i = 0; i < ecount; i++) {
-        printf("Edge %d-%d: Fractional Value = %.4f\n", elist[2 * i], elist[2 * i + 1], x[i]);
-    }
-
+    printf("\nRunning revised blossom loop...\n");
     int silent = 0;
     CCrandstate rstate;
     CCutil_sprand(12345, &rstate); // Initialize random state
 
-    printf("\nRunning revised blossom loop...\n");
     int rval = revised_blossom_loop(ncount, ecount, elist, x, silent, &rstate);
     if (rval) {
         fprintf(stderr, "Blossom loop failed\n");
@@ -52,7 +46,7 @@ int main(int argc, char **argv) {
     return 0;
 }
 
-// Generate Edge List and Fractional Values
+// Generate Fractional Solution
 void generate_fractional_solution(int ncount, int ecount, int *elist, double *x) {
     double *vertex_sum = calloc(ncount, sizeof(double));
     if (!vertex_sum) {
@@ -60,134 +54,137 @@ void generate_fractional_solution(int ncount, int ecount, int *elist, double *x)
         exit(1);
     }
 
-    // Generate edges ensuring all vertices are connected in a cycle
+    // Generate a complete graph
+    int edge_index = 0;
     for (int i = 0; i < ncount; i++) {
-        elist[2 * i] = i;
-        elist[2 * i + 1] = (i + 1) % ncount; // Connect to next vertex, wrapping around
+        for (int j = i + 1; j < ncount; j++) {
+            elist[2 * edge_index] = i;
+            elist[2 * edge_index + 1] = j;
+            edge_index++;
+        }
     }
 
-    // Assign fractional values ensuring sum of incident edges equals 2
+    // Assign fractional values
     for (int i = 0; i < ecount; i++) {
         int u = elist[2 * i];
         int v = elist[2 * i + 1];
-
-        // Calculate the remaining fractional capacity for each vertex
         double remaining_u = 2.0 - vertex_sum[u];
         double remaining_v = 2.0 - vertex_sum[v];
-
-        // Determine the maximum assignable value to this edge
         double max_assignable = (remaining_u < remaining_v) ? remaining_u : remaining_v;
-        max_assignable = (max_assignable > 1.0) ? 1.0 : max_assignable; // Cap at 1.0
+        max_assignable = (max_assignable > 1.0) ? 1.0 : max_assignable;
 
-        if (i == ecount - 1 || max_assignable <= 0.0) {
-            // Final adjustment for the last edge or when max_assignable is 0
-            x[i] = (remaining_u < remaining_v) ? remaining_u : remaining_v;
-        } else {
-            // Random fractional value between 0 and max_assignable
-            x[i] = ((double)rand() / RAND_MAX) * max_assignable;
-        }
-
-        // Update the vertex sum for each incident vertex
+        x[i] = ((double)rand() / RAND_MAX) * max_assignable;
         vertex_sum[u] += x[i];
         vertex_sum[v] += x[i];
     }
 
-    // Debugging: Print the sum of fractional values for each vertex
-    printf("Vertex fractional sums:\n");
-    for (int i = 0; i < ncount; i++) {
-        printf("Vertex %d: Sum = %.4f\n", i, vertex_sum[i]);
-    }
 
     free(vertex_sum);
 }
 
-
-
 // Revised Blossom Loop
 int revised_blossom_loop(int ncount, int ecount, int *elist, double *x, int silent, CCrandstate *rstate) {
-    int rval = 0;
-    int cutcount, cut_added;
-    int outside = 0;
-    int num_loop = 10;
+    int cutcount = 0, cut_added = 0;
+    int outside = 0, num_loop = 10;
     CCtsp_lpcut_in *cuts = NULL;
 
-    if (ncount <= 0 || ecount <= 0 || !elist || !x) {
-        fprintf(stderr, "Invalid input to revised_blossom_loop\n");
-        return 1;
-    }
-
-    printf("Debug: Input Validation Passed\n");
-    printf("Debug: ncount = %d, ecount = %d\n", ncount, ecount);
-
     do {
-        do {
-            cut_added = 0;
+        cut_added = 0;  // Reset cut_added for this outer loop iteration
 
-            // Fast Blossoms
-            printf("Debug: Starting Fast Blossoms\n");
-            rval = CCtsp_fastblossom(&cuts, &cutcount, ncount, ecount, elist, x);
-            if (rval) {
-                fprintf(stderr, "CCtsp_fastblossom failed\n");
-                goto CLEANUP;
-            }
-            printf("Debug: Fast Blossoms completed with %d cuts\n", cutcount);
-            print_cuts(cuts);
+        // Fast Blossoms
+        printf("\nRunning Fast Blossoms...\n");
+        CCtsp_fastblossom(&cuts, &cutcount, ncount, ecount, elist, x);
+        if (cutcount > 0) {
+            cut_added += cutcount;
+            verify_and_print_comb(cuts, ncount, ecount, elist, x);
             free_cuts(cuts);
             cuts = NULL;
+        } else {
+            printf("Fast Blossoms found no cuts.\n");
+        }
 
-            // Groetschel-Holland Fast Blossoms
-            printf("Debug: Starting Groetschel-Holland Fast Blossoms\n");
-            rval = CCtsp_ghfastblossom(&cuts, &cutcount, ncount, ecount, elist, x);
-            if (rval) {
-                fprintf(stderr, "CCtsp_ghfastblossom failed\n");
-                goto CLEANUP;
-            }
-            printf("Debug: Groetschel-Holland Fast Blossoms completed with %d cuts\n", cutcount);
-            print_cuts(cuts);
+        // Groetschel-Holland Fast Blossoms
+        printf("\nRunning Groetschel-Holland Fast Blossoms...\n");
+        CCtsp_ghfastblossom(&cuts, &cutcount, ncount, ecount, elist, x);
+        if (cutcount > 0) {
+            cut_added += cutcount;
+            verify_and_print_comb(cuts, ncount, ecount, elist, x);
             free_cuts(cuts);
             cuts = NULL;
+        } else {
+            printf("GH Fast Blossoms found no cuts.\n");
+        }
 
-            // Exact Blossoms
-            printf("Debug: Starting Exact Blossoms\n");
-            rval = CCtsp_exactblossom(&cuts, &cutcount, ncount, ecount, elist, x, rstate);
-            if (rval) {
-                fprintf(stderr, "CCtsp_exactblossom failed\n");
-                goto CLEANUP;
-            }
-            printf("Debug: Exact Blossoms completed with %d cuts\n", cutcount);
-            print_cuts(cuts);
+        // Exact Blossoms
+        printf("\nRunning Exact Blossoms...\n");
+        CCtsp_exactblossom(&cuts, &cutcount, ncount, ecount, elist, x, rstate);
+        if (cutcount > 0) {
+            cut_added += cutcount;
+            verify_and_print_comb(cuts, ncount, ecount, elist, x);
             free_cuts(cuts);
             cuts = NULL;
+        } else {
+            printf("Exact Blossoms found no cuts.\n");
+        }
 
-        } while (cut_added > 0);
+    } while (cut_added > 0 && ++outside < num_loop);  // Continue if cuts were added
 
-        outside++;
-    } while (outside < num_loop);
-
-CLEANUP:
-    if (cuts) {
-        free_cuts(cuts);
-        cuts = NULL;
-    }
-    return rval;
+    if (cuts) free_cuts(cuts);
+    return 0;  // Return 0 explicitly since rval is no longer tracked
 }
 
-// Print Cuts
-void print_cuts(CCtsp_lpcut_in *cuts) {
+
+// Verify and Print Comb Details
+void verify_and_print_comb(CCtsp_lpcut_in *cuts, int ncount, int ecount, int *elist, double *x) {
     CCtsp_lpcut_in *current_cut = cuts;
     int comb_index = 0;
 
     while (current_cut) {
-        printf("Comb %d:\n", ++comb_index);
+        printf("\nInspecting Comb %d:\n", ++comb_index);
+        double delta_H = 0.0, delta_T_sum = 0.0;
+        int num_teeth = current_cut->cliquecount - 1;
 
-        // Iterate through all cliques in the comb
-        for (int t = 0; t < current_cut->cliquecount; t++) {
-            for (int i = 0; i < current_cut->cliques[t].segcount; i++) {
-                printf("[%d, %d] ", 
-                       current_cut->cliques[t].nodes[i].lo, 
-                       current_cut->cliques[t].nodes[i].hi);
+        // Print the handle
+        printf("Handle: ");
+        CCtsp_lpclique *handle = &(current_cut->cliques[0]);
+        for (int s = 0; s < handle->segcount; s++) {
+            printf("[%d, %d] ", handle->nodes[s].lo, handle->nodes[s].hi);
+        }
+        printf("\n");
+        // Print the teeth
+        for (int t = 1; t <= num_teeth; t++) {
+            printf("Tooth %d: ", t);
+            CCtsp_lpclique *tooth = &(current_cut->cliques[t]);
+            for (int s = 0; s < tooth->segcount; s++) {
+                printf("[%d, %d] ", tooth->nodes[s].lo, tooth->nodes[s].hi);
             }
-            printf("\n");
+        }
+        printf("\n");
+        // Calculate delta_H and delta_T_sum
+        for (int i = 0; i < ecount; i++) {
+            int u = elist[2 * i];
+            int v = elist[2 * i + 1];
+            for (int t = 0; t < current_cut->cliquecount; t++) {
+                CCtsp_lpclique *clique = &(current_cut->cliques[t]);
+                int in_handle = 0, in_teeth = 0;
+                for (int s = 0; s < clique->segcount; s++) {
+                    if (clique->nodes[s].lo <= u && u <= clique->nodes[s].hi) in_handle++;
+                    if (clique->nodes[s].lo <= v && v <= clique->nodes[s].hi) in_teeth++;
+                }
+                if ((in_handle ^ in_teeth)) {
+                    if (t == 0) delta_H += x[i];
+                    else delta_T_sum += x[i];
+                }
+            }
+        }
+
+        // Print the inequality
+        printf("LHS = %.4f, RHS = %d\n", delta_H + delta_T_sum, 3 * num_teeth + 1);
+        if (delta_H + delta_T_sum < 3 * num_teeth + 1) {
+            printf("  Comb inequality is violated.\n");
+        } else {
+            printf("  Comb inequality is satisfied.\n");
+            exit(1);
         }
 
         current_cut = current_cut->next;
@@ -202,5 +199,5 @@ void free_cuts(CCtsp_lpcut_in *cuts) {
         CCtsp_free_lpcut_in(cuts);
         cuts = next;
     }
-    printf("freeing cuts completed\n");
+    printf("Freeing cuts completed\n");
 }
