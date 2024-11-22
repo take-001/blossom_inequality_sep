@@ -6,17 +6,15 @@
 #include "macrorus.h"
 
 // Function Prototypes
-int revised_blossom_loop(int ncount, int ecount, int *elist, double *x, int silent, CCrandstate *rstate);
+int blossom_loop(int ncount, int ecount, int *elist, double *x, int silent, CCrandstate *rstate);
 void verify_and_print_comb(CCtsp_lpcut_in *cuts, int ncount, int ecount, int *elist, double *x);
 void free_cuts(CCtsp_lpcut_in *cuts);
 void generate_fractional_solution(int ncount, int ecount, int *elist, double *x);
 
-// Main Function
-int main(int argc, char **argv) {
-    int ncount = 400; // Number of nodes
-    int ecount = ncount * (ncount - 1) / 2; // Number of edges for a complete graph
 
-    // Dynamically allocate edge list and fractional values
+int main(int argc, char **argv) {
+    int ncount = 400;
+    int ecount = ncount * (ncount - 1) / 2; 
     int *elist = malloc(2 * ecount * sizeof(int));
     double *x = malloc(ecount * sizeof(double));
     if (!elist || !x) {
@@ -24,15 +22,17 @@ int main(int argc, char **argv) {
         return 1;
     }
 
-    // Generate edge list and fractional values ensuring constraints
+   
     generate_fractional_solution(ncount, ecount, elist, x);
+
+
 
     printf("\nRunning revised blossom loop...\n");
     int silent = 0;
     CCrandstate rstate;
-    CCutil_sprand(12345, &rstate); // Initialize random state
+    CCutil_sprand(12345, &rstate);
 
-    int rval = revised_blossom_loop(ncount, ecount, elist, x, silent, &rstate);
+    int rval = blossom_loop(ncount, ecount, elist, x, silent, &rstate);
     if (rval) {
         fprintf(stderr, "Blossom loop failed\n");
         free(elist);
@@ -46,7 +46,7 @@ int main(int argc, char **argv) {
     return 0;
 }
 
-// Generate Fractional Solution
+
 void generate_fractional_solution(int ncount, int ecount, int *elist, double *x) {
     double *vertex_sum = calloc(ncount, sizeof(double));
     if (!vertex_sum) {
@@ -54,7 +54,6 @@ void generate_fractional_solution(int ncount, int ecount, int *elist, double *x)
         exit(1);
     }
 
-    // Generate a complete graph
     int edge_index = 0;
     for (int i = 0; i < ncount; i++) {
         for (int j = i + 1; j < ncount; j++) {
@@ -63,8 +62,6 @@ void generate_fractional_solution(int ncount, int ecount, int *elist, double *x)
             edge_index++;
         }
     }
-
-    // Assign fractional values
     for (int i = 0; i < ecount; i++) {
         int u = elist[2 * i];
         int v = elist[2 * i + 1];
@@ -82,8 +79,8 @@ void generate_fractional_solution(int ncount, int ecount, int *elist, double *x)
     free(vertex_sum);
 }
 
-// Revised Blossom Loop
-int revised_blossom_loop(int ncount, int ecount, int *elist, double *x, int silent, CCrandstate *rstate) {
+
+int blossom_loop(int ncount, int ecount, int *elist, double *x, int silent, CCrandstate *rstate) {
     int cutcount = 0, cut_added = 0;
     int outside = 0, num_loop = 10;
     CCtsp_lpcut_in *cuts = NULL;
