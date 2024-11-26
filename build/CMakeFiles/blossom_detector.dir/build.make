@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cvdg/Desktop/test/blossom_inequality_sep
+CMAKE_SOURCE_DIR = /home/cvdg/Desktop/TSP_test/blossom_inequality_sep
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cvdg/Desktop/test/blossom_inequality_sep/build
+CMAKE_BINARY_DIR = /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/blossom_detector.dir/depend.make
@@ -70,200 +70,200 @@ include CMakeFiles/blossom_detector.dir/progress.make
 include CMakeFiles/blossom_detector.dir/flags.make
 
 CMakeFiles/blossom_detector.dir/blossom_detector.c.o: CMakeFiles/blossom_detector.dir/flags.make
-CMakeFiles/blossom_detector.dir/blossom_detector.c.o: /home/cvdg/Desktop/test/blossom_inequality_sep/blossom_detector.c
+CMakeFiles/blossom_detector.dir/blossom_detector.c.o: /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/blossom_detector.c
 CMakeFiles/blossom_detector.dir/blossom_detector.c.o: CMakeFiles/blossom_detector.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cvdg/Desktop/test/blossom_inequality_sep/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/blossom_detector.dir/blossom_detector.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/blossom_detector.dir/blossom_detector.c.o -MF CMakeFiles/blossom_detector.dir/blossom_detector.c.o.d -o CMakeFiles/blossom_detector.dir/blossom_detector.c.o -c /home/cvdg/Desktop/test/blossom_inequality_sep/blossom_detector.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cvdg/Desktop/TSP_test/blossom_inequality_sep/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/blossom_detector.dir/blossom_detector.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/blossom_detector.dir/blossom_detector.c.o -MF CMakeFiles/blossom_detector.dir/blossom_detector.c.o.d -o CMakeFiles/blossom_detector.dir/blossom_detector.c.o -c /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/blossom_detector.c
 
 CMakeFiles/blossom_detector.dir/blossom_detector.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/blossom_detector.dir/blossom_detector.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cvdg/Desktop/test/blossom_inequality_sep/blossom_detector.c > CMakeFiles/blossom_detector.dir/blossom_detector.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/blossom_detector.c > CMakeFiles/blossom_detector.dir/blossom_detector.c.i
 
 CMakeFiles/blossom_detector.dir/blossom_detector.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/blossom_detector.dir/blossom_detector.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cvdg/Desktop/test/blossom_inequality_sep/blossom_detector.c -o CMakeFiles/blossom_detector.dir/blossom_detector.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/blossom_detector.c -o CMakeFiles/blossom_detector.dir/blossom_detector.c.s
 
 CMakeFiles/blossom_detector.dir/src/blossom.c.o: CMakeFiles/blossom_detector.dir/flags.make
-CMakeFiles/blossom_detector.dir/src/blossom.c.o: /home/cvdg/Desktop/test/blossom_inequality_sep/src/blossom.c
+CMakeFiles/blossom_detector.dir/src/blossom.c.o: /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/blossom.c
 CMakeFiles/blossom_detector.dir/src/blossom.c.o: CMakeFiles/blossom_detector.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cvdg/Desktop/test/blossom_inequality_sep/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/blossom_detector.dir/src/blossom.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/blossom_detector.dir/src/blossom.c.o -MF CMakeFiles/blossom_detector.dir/src/blossom.c.o.d -o CMakeFiles/blossom_detector.dir/src/blossom.c.o -c /home/cvdg/Desktop/test/blossom_inequality_sep/src/blossom.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cvdg/Desktop/TSP_test/blossom_inequality_sep/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/blossom_detector.dir/src/blossom.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/blossom_detector.dir/src/blossom.c.o -MF CMakeFiles/blossom_detector.dir/src/blossom.c.o.d -o CMakeFiles/blossom_detector.dir/src/blossom.c.o -c /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/blossom.c
 
 CMakeFiles/blossom_detector.dir/src/blossom.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/blossom_detector.dir/src/blossom.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cvdg/Desktop/test/blossom_inequality_sep/src/blossom.c > CMakeFiles/blossom_detector.dir/src/blossom.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/blossom.c > CMakeFiles/blossom_detector.dir/src/blossom.c.i
 
 CMakeFiles/blossom_detector.dir/src/blossom.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/blossom_detector.dir/src/blossom.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cvdg/Desktop/test/blossom_inequality_sep/src/blossom.c -o CMakeFiles/blossom_detector.dir/src/blossom.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/blossom.c -o CMakeFiles/blossom_detector.dir/src/blossom.c.s
 
 CMakeFiles/blossom_detector.dir/src/cliqwork.c.o: CMakeFiles/blossom_detector.dir/flags.make
-CMakeFiles/blossom_detector.dir/src/cliqwork.c.o: /home/cvdg/Desktop/test/blossom_inequality_sep/src/cliqwork.c
+CMakeFiles/blossom_detector.dir/src/cliqwork.c.o: /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/cliqwork.c
 CMakeFiles/blossom_detector.dir/src/cliqwork.c.o: CMakeFiles/blossom_detector.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cvdg/Desktop/test/blossom_inequality_sep/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/blossom_detector.dir/src/cliqwork.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/blossom_detector.dir/src/cliqwork.c.o -MF CMakeFiles/blossom_detector.dir/src/cliqwork.c.o.d -o CMakeFiles/blossom_detector.dir/src/cliqwork.c.o -c /home/cvdg/Desktop/test/blossom_inequality_sep/src/cliqwork.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cvdg/Desktop/TSP_test/blossom_inequality_sep/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/blossom_detector.dir/src/cliqwork.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/blossom_detector.dir/src/cliqwork.c.o -MF CMakeFiles/blossom_detector.dir/src/cliqwork.c.o.d -o CMakeFiles/blossom_detector.dir/src/cliqwork.c.o -c /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/cliqwork.c
 
 CMakeFiles/blossom_detector.dir/src/cliqwork.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/blossom_detector.dir/src/cliqwork.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cvdg/Desktop/test/blossom_inequality_sep/src/cliqwork.c > CMakeFiles/blossom_detector.dir/src/cliqwork.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/cliqwork.c > CMakeFiles/blossom_detector.dir/src/cliqwork.c.i
 
 CMakeFiles/blossom_detector.dir/src/cliqwork.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/blossom_detector.dir/src/cliqwork.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cvdg/Desktop/test/blossom_inequality_sep/src/cliqwork.c -o CMakeFiles/blossom_detector.dir/src/cliqwork.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/cliqwork.c -o CMakeFiles/blossom_detector.dir/src/cliqwork.c.s
 
 CMakeFiles/blossom_detector.dir/src/skeleton.c.o: CMakeFiles/blossom_detector.dir/flags.make
-CMakeFiles/blossom_detector.dir/src/skeleton.c.o: /home/cvdg/Desktop/test/blossom_inequality_sep/src/skeleton.c
+CMakeFiles/blossom_detector.dir/src/skeleton.c.o: /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/skeleton.c
 CMakeFiles/blossom_detector.dir/src/skeleton.c.o: CMakeFiles/blossom_detector.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cvdg/Desktop/test/blossom_inequality_sep/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/blossom_detector.dir/src/skeleton.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/blossom_detector.dir/src/skeleton.c.o -MF CMakeFiles/blossom_detector.dir/src/skeleton.c.o.d -o CMakeFiles/blossom_detector.dir/src/skeleton.c.o -c /home/cvdg/Desktop/test/blossom_inequality_sep/src/skeleton.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cvdg/Desktop/TSP_test/blossom_inequality_sep/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/blossom_detector.dir/src/skeleton.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/blossom_detector.dir/src/skeleton.c.o -MF CMakeFiles/blossom_detector.dir/src/skeleton.c.o.d -o CMakeFiles/blossom_detector.dir/src/skeleton.c.o -c /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/skeleton.c
 
 CMakeFiles/blossom_detector.dir/src/skeleton.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/blossom_detector.dir/src/skeleton.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cvdg/Desktop/test/blossom_inequality_sep/src/skeleton.c > CMakeFiles/blossom_detector.dir/src/skeleton.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/skeleton.c > CMakeFiles/blossom_detector.dir/src/skeleton.c.i
 
 CMakeFiles/blossom_detector.dir/src/skeleton.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/blossom_detector.dir/src/skeleton.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cvdg/Desktop/test/blossom_inequality_sep/src/skeleton.c -o CMakeFiles/blossom_detector.dir/src/skeleton.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/skeleton.c -o CMakeFiles/blossom_detector.dir/src/skeleton.c.s
 
 CMakeFiles/blossom_detector.dir/src/cutpool.c.o: CMakeFiles/blossom_detector.dir/flags.make
-CMakeFiles/blossom_detector.dir/src/cutpool.c.o: /home/cvdg/Desktop/test/blossom_inequality_sep/src/cutpool.c
+CMakeFiles/blossom_detector.dir/src/cutpool.c.o: /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/cutpool.c
 CMakeFiles/blossom_detector.dir/src/cutpool.c.o: CMakeFiles/blossom_detector.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cvdg/Desktop/test/blossom_inequality_sep/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/blossom_detector.dir/src/cutpool.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/blossom_detector.dir/src/cutpool.c.o -MF CMakeFiles/blossom_detector.dir/src/cutpool.c.o.d -o CMakeFiles/blossom_detector.dir/src/cutpool.c.o -c /home/cvdg/Desktop/test/blossom_inequality_sep/src/cutpool.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cvdg/Desktop/TSP_test/blossom_inequality_sep/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/blossom_detector.dir/src/cutpool.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/blossom_detector.dir/src/cutpool.c.o -MF CMakeFiles/blossom_detector.dir/src/cutpool.c.o.d -o CMakeFiles/blossom_detector.dir/src/cutpool.c.o -c /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/cutpool.c
 
 CMakeFiles/blossom_detector.dir/src/cutpool.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/blossom_detector.dir/src/cutpool.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cvdg/Desktop/test/blossom_inequality_sep/src/cutpool.c > CMakeFiles/blossom_detector.dir/src/cutpool.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/cutpool.c > CMakeFiles/blossom_detector.dir/src/cutpool.c.i
 
 CMakeFiles/blossom_detector.dir/src/cutpool.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/blossom_detector.dir/src/cutpool.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cvdg/Desktop/test/blossom_inequality_sep/src/cutpool.c -o CMakeFiles/blossom_detector.dir/src/cutpool.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/cutpool.c -o CMakeFiles/blossom_detector.dir/src/cutpool.c.s
 
 CMakeFiles/blossom_detector.dir/src/allocrus.c.o: CMakeFiles/blossom_detector.dir/flags.make
-CMakeFiles/blossom_detector.dir/src/allocrus.c.o: /home/cvdg/Desktop/test/blossom_inequality_sep/src/allocrus.c
+CMakeFiles/blossom_detector.dir/src/allocrus.c.o: /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/allocrus.c
 CMakeFiles/blossom_detector.dir/src/allocrus.c.o: CMakeFiles/blossom_detector.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cvdg/Desktop/test/blossom_inequality_sep/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/blossom_detector.dir/src/allocrus.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/blossom_detector.dir/src/allocrus.c.o -MF CMakeFiles/blossom_detector.dir/src/allocrus.c.o.d -o CMakeFiles/blossom_detector.dir/src/allocrus.c.o -c /home/cvdg/Desktop/test/blossom_inequality_sep/src/allocrus.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cvdg/Desktop/TSP_test/blossom_inequality_sep/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/blossom_detector.dir/src/allocrus.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/blossom_detector.dir/src/allocrus.c.o -MF CMakeFiles/blossom_detector.dir/src/allocrus.c.o.d -o CMakeFiles/blossom_detector.dir/src/allocrus.c.o -c /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/allocrus.c
 
 CMakeFiles/blossom_detector.dir/src/allocrus.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/blossom_detector.dir/src/allocrus.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cvdg/Desktop/test/blossom_inequality_sep/src/allocrus.c > CMakeFiles/blossom_detector.dir/src/allocrus.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/allocrus.c > CMakeFiles/blossom_detector.dir/src/allocrus.c.i
 
 CMakeFiles/blossom_detector.dir/src/allocrus.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/blossom_detector.dir/src/allocrus.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cvdg/Desktop/test/blossom_inequality_sep/src/allocrus.c -o CMakeFiles/blossom_detector.dir/src/allocrus.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/allocrus.c -o CMakeFiles/blossom_detector.dir/src/allocrus.c.s
 
 CMakeFiles/blossom_detector.dir/src/urandom.c.o: CMakeFiles/blossom_detector.dir/flags.make
-CMakeFiles/blossom_detector.dir/src/urandom.c.o: /home/cvdg/Desktop/test/blossom_inequality_sep/src/urandom.c
+CMakeFiles/blossom_detector.dir/src/urandom.c.o: /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/urandom.c
 CMakeFiles/blossom_detector.dir/src/urandom.c.o: CMakeFiles/blossom_detector.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cvdg/Desktop/test/blossom_inequality_sep/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/blossom_detector.dir/src/urandom.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/blossom_detector.dir/src/urandom.c.o -MF CMakeFiles/blossom_detector.dir/src/urandom.c.o.d -o CMakeFiles/blossom_detector.dir/src/urandom.c.o -c /home/cvdg/Desktop/test/blossom_inequality_sep/src/urandom.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cvdg/Desktop/TSP_test/blossom_inequality_sep/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/blossom_detector.dir/src/urandom.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/blossom_detector.dir/src/urandom.c.o -MF CMakeFiles/blossom_detector.dir/src/urandom.c.o.d -o CMakeFiles/blossom_detector.dir/src/urandom.c.o -c /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/urandom.c
 
 CMakeFiles/blossom_detector.dir/src/urandom.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/blossom_detector.dir/src/urandom.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cvdg/Desktop/test/blossom_inequality_sep/src/urandom.c > CMakeFiles/blossom_detector.dir/src/urandom.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/urandom.c > CMakeFiles/blossom_detector.dir/src/urandom.c.i
 
 CMakeFiles/blossom_detector.dir/src/urandom.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/blossom_detector.dir/src/urandom.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cvdg/Desktop/test/blossom_inequality_sep/src/urandom.c -o CMakeFiles/blossom_detector.dir/src/urandom.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/urandom.c -o CMakeFiles/blossom_detector.dir/src/urandom.c.s
 
 CMakeFiles/blossom_detector.dir/src/gomoryhu.c.o: CMakeFiles/blossom_detector.dir/flags.make
-CMakeFiles/blossom_detector.dir/src/gomoryhu.c.o: /home/cvdg/Desktop/test/blossom_inequality_sep/src/gomoryhu.c
+CMakeFiles/blossom_detector.dir/src/gomoryhu.c.o: /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/gomoryhu.c
 CMakeFiles/blossom_detector.dir/src/gomoryhu.c.o: CMakeFiles/blossom_detector.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cvdg/Desktop/test/blossom_inequality_sep/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/blossom_detector.dir/src/gomoryhu.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/blossom_detector.dir/src/gomoryhu.c.o -MF CMakeFiles/blossom_detector.dir/src/gomoryhu.c.o.d -o CMakeFiles/blossom_detector.dir/src/gomoryhu.c.o -c /home/cvdg/Desktop/test/blossom_inequality_sep/src/gomoryhu.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cvdg/Desktop/TSP_test/blossom_inequality_sep/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/blossom_detector.dir/src/gomoryhu.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/blossom_detector.dir/src/gomoryhu.c.o -MF CMakeFiles/blossom_detector.dir/src/gomoryhu.c.o.d -o CMakeFiles/blossom_detector.dir/src/gomoryhu.c.o -c /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/gomoryhu.c
 
 CMakeFiles/blossom_detector.dir/src/gomoryhu.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/blossom_detector.dir/src/gomoryhu.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cvdg/Desktop/test/blossom_inequality_sep/src/gomoryhu.c > CMakeFiles/blossom_detector.dir/src/gomoryhu.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/gomoryhu.c > CMakeFiles/blossom_detector.dir/src/gomoryhu.c.i
 
 CMakeFiles/blossom_detector.dir/src/gomoryhu.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/blossom_detector.dir/src/gomoryhu.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cvdg/Desktop/test/blossom_inequality_sep/src/gomoryhu.c -o CMakeFiles/blossom_detector.dir/src/gomoryhu.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/gomoryhu.c -o CMakeFiles/blossom_detector.dir/src/gomoryhu.c.s
 
 CMakeFiles/blossom_detector.dir/src/sortrus.c.o: CMakeFiles/blossom_detector.dir/flags.make
-CMakeFiles/blossom_detector.dir/src/sortrus.c.o: /home/cvdg/Desktop/test/blossom_inequality_sep/src/sortrus.c
+CMakeFiles/blossom_detector.dir/src/sortrus.c.o: /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/sortrus.c
 CMakeFiles/blossom_detector.dir/src/sortrus.c.o: CMakeFiles/blossom_detector.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cvdg/Desktop/test/blossom_inequality_sep/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/blossom_detector.dir/src/sortrus.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/blossom_detector.dir/src/sortrus.c.o -MF CMakeFiles/blossom_detector.dir/src/sortrus.c.o.d -o CMakeFiles/blossom_detector.dir/src/sortrus.c.o -c /home/cvdg/Desktop/test/blossom_inequality_sep/src/sortrus.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cvdg/Desktop/TSP_test/blossom_inequality_sep/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/blossom_detector.dir/src/sortrus.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/blossom_detector.dir/src/sortrus.c.o -MF CMakeFiles/blossom_detector.dir/src/sortrus.c.o.d -o CMakeFiles/blossom_detector.dir/src/sortrus.c.o -c /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/sortrus.c
 
 CMakeFiles/blossom_detector.dir/src/sortrus.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/blossom_detector.dir/src/sortrus.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cvdg/Desktop/test/blossom_inequality_sep/src/sortrus.c > CMakeFiles/blossom_detector.dir/src/sortrus.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/sortrus.c > CMakeFiles/blossom_detector.dir/src/sortrus.c.i
 
 CMakeFiles/blossom_detector.dir/src/sortrus.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/blossom_detector.dir/src/sortrus.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cvdg/Desktop/test/blossom_inequality_sep/src/sortrus.c -o CMakeFiles/blossom_detector.dir/src/sortrus.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/sortrus.c -o CMakeFiles/blossom_detector.dir/src/sortrus.c.s
 
 CMakeFiles/blossom_detector.dir/src/safe_io.c.o: CMakeFiles/blossom_detector.dir/flags.make
-CMakeFiles/blossom_detector.dir/src/safe_io.c.o: /home/cvdg/Desktop/test/blossom_inequality_sep/src/safe_io.c
+CMakeFiles/blossom_detector.dir/src/safe_io.c.o: /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/safe_io.c
 CMakeFiles/blossom_detector.dir/src/safe_io.c.o: CMakeFiles/blossom_detector.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cvdg/Desktop/test/blossom_inequality_sep/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/blossom_detector.dir/src/safe_io.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/blossom_detector.dir/src/safe_io.c.o -MF CMakeFiles/blossom_detector.dir/src/safe_io.c.o.d -o CMakeFiles/blossom_detector.dir/src/safe_io.c.o -c /home/cvdg/Desktop/test/blossom_inequality_sep/src/safe_io.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cvdg/Desktop/TSP_test/blossom_inequality_sep/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/blossom_detector.dir/src/safe_io.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/blossom_detector.dir/src/safe_io.c.o -MF CMakeFiles/blossom_detector.dir/src/safe_io.c.o.d -o CMakeFiles/blossom_detector.dir/src/safe_io.c.o -c /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/safe_io.c
 
 CMakeFiles/blossom_detector.dir/src/safe_io.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/blossom_detector.dir/src/safe_io.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cvdg/Desktop/test/blossom_inequality_sep/src/safe_io.c > CMakeFiles/blossom_detector.dir/src/safe_io.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/safe_io.c > CMakeFiles/blossom_detector.dir/src/safe_io.c.i
 
 CMakeFiles/blossom_detector.dir/src/safe_io.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/blossom_detector.dir/src/safe_io.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cvdg/Desktop/test/blossom_inequality_sep/src/safe_io.c -o CMakeFiles/blossom_detector.dir/src/safe_io.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/safe_io.c -o CMakeFiles/blossom_detector.dir/src/safe_io.c.s
 
 CMakeFiles/blossom_detector.dir/src/cliqhash.c.o: CMakeFiles/blossom_detector.dir/flags.make
-CMakeFiles/blossom_detector.dir/src/cliqhash.c.o: /home/cvdg/Desktop/test/blossom_inequality_sep/src/cliqhash.c
+CMakeFiles/blossom_detector.dir/src/cliqhash.c.o: /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/cliqhash.c
 CMakeFiles/blossom_detector.dir/src/cliqhash.c.o: CMakeFiles/blossom_detector.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cvdg/Desktop/test/blossom_inequality_sep/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/blossom_detector.dir/src/cliqhash.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/blossom_detector.dir/src/cliqhash.c.o -MF CMakeFiles/blossom_detector.dir/src/cliqhash.c.o.d -o CMakeFiles/blossom_detector.dir/src/cliqhash.c.o -c /home/cvdg/Desktop/test/blossom_inequality_sep/src/cliqhash.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cvdg/Desktop/TSP_test/blossom_inequality_sep/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/blossom_detector.dir/src/cliqhash.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/blossom_detector.dir/src/cliqhash.c.o -MF CMakeFiles/blossom_detector.dir/src/cliqhash.c.o.d -o CMakeFiles/blossom_detector.dir/src/cliqhash.c.o -c /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/cliqhash.c
 
 CMakeFiles/blossom_detector.dir/src/cliqhash.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/blossom_detector.dir/src/cliqhash.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cvdg/Desktop/test/blossom_inequality_sep/src/cliqhash.c > CMakeFiles/blossom_detector.dir/src/cliqhash.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/cliqhash.c > CMakeFiles/blossom_detector.dir/src/cliqhash.c.i
 
 CMakeFiles/blossom_detector.dir/src/cliqhash.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/blossom_detector.dir/src/cliqhash.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cvdg/Desktop/test/blossom_inequality_sep/src/cliqhash.c -o CMakeFiles/blossom_detector.dir/src/cliqhash.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/cliqhash.c -o CMakeFiles/blossom_detector.dir/src/cliqhash.c.s
 
 CMakeFiles/blossom_detector.dir/src/genhash.c.o: CMakeFiles/blossom_detector.dir/flags.make
-CMakeFiles/blossom_detector.dir/src/genhash.c.o: /home/cvdg/Desktop/test/blossom_inequality_sep/src/genhash.c
+CMakeFiles/blossom_detector.dir/src/genhash.c.o: /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/genhash.c
 CMakeFiles/blossom_detector.dir/src/genhash.c.o: CMakeFiles/blossom_detector.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cvdg/Desktop/test/blossom_inequality_sep/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/blossom_detector.dir/src/genhash.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/blossom_detector.dir/src/genhash.c.o -MF CMakeFiles/blossom_detector.dir/src/genhash.c.o.d -o CMakeFiles/blossom_detector.dir/src/genhash.c.o -c /home/cvdg/Desktop/test/blossom_inequality_sep/src/genhash.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cvdg/Desktop/TSP_test/blossom_inequality_sep/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/blossom_detector.dir/src/genhash.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/blossom_detector.dir/src/genhash.c.o -MF CMakeFiles/blossom_detector.dir/src/genhash.c.o.d -o CMakeFiles/blossom_detector.dir/src/genhash.c.o -c /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/genhash.c
 
 CMakeFiles/blossom_detector.dir/src/genhash.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/blossom_detector.dir/src/genhash.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cvdg/Desktop/test/blossom_inequality_sep/src/genhash.c > CMakeFiles/blossom_detector.dir/src/genhash.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/genhash.c > CMakeFiles/blossom_detector.dir/src/genhash.c.i
 
 CMakeFiles/blossom_detector.dir/src/genhash.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/blossom_detector.dir/src/genhash.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cvdg/Desktop/test/blossom_inequality_sep/src/genhash.c -o CMakeFiles/blossom_detector.dir/src/genhash.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/genhash.c -o CMakeFiles/blossom_detector.dir/src/genhash.c.s
 
 CMakeFiles/blossom_detector.dir/src/cut_st.c.o: CMakeFiles/blossom_detector.dir/flags.make
-CMakeFiles/blossom_detector.dir/src/cut_st.c.o: /home/cvdg/Desktop/test/blossom_inequality_sep/src/cut_st.c
+CMakeFiles/blossom_detector.dir/src/cut_st.c.o: /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/cut_st.c
 CMakeFiles/blossom_detector.dir/src/cut_st.c.o: CMakeFiles/blossom_detector.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cvdg/Desktop/test/blossom_inequality_sep/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/blossom_detector.dir/src/cut_st.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/blossom_detector.dir/src/cut_st.c.o -MF CMakeFiles/blossom_detector.dir/src/cut_st.c.o.d -o CMakeFiles/blossom_detector.dir/src/cut_st.c.o -c /home/cvdg/Desktop/test/blossom_inequality_sep/src/cut_st.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cvdg/Desktop/TSP_test/blossom_inequality_sep/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/blossom_detector.dir/src/cut_st.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/blossom_detector.dir/src/cut_st.c.o -MF CMakeFiles/blossom_detector.dir/src/cut_st.c.o.d -o CMakeFiles/blossom_detector.dir/src/cut_st.c.o -c /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/cut_st.c
 
 CMakeFiles/blossom_detector.dir/src/cut_st.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/blossom_detector.dir/src/cut_st.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cvdg/Desktop/test/blossom_inequality_sep/src/cut_st.c > CMakeFiles/blossom_detector.dir/src/cut_st.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/cut_st.c > CMakeFiles/blossom_detector.dir/src/cut_st.c.i
 
 CMakeFiles/blossom_detector.dir/src/cut_st.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/blossom_detector.dir/src/cut_st.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cvdg/Desktop/test/blossom_inequality_sep/src/cut_st.c -o CMakeFiles/blossom_detector.dir/src/cut_st.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/cut_st.c -o CMakeFiles/blossom_detector.dir/src/cut_st.c.s
 
 CMakeFiles/blossom_detector.dir/src/util.c.o: CMakeFiles/blossom_detector.dir/flags.make
-CMakeFiles/blossom_detector.dir/src/util.c.o: /home/cvdg/Desktop/test/blossom_inequality_sep/src/util.c
+CMakeFiles/blossom_detector.dir/src/util.c.o: /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/util.c
 CMakeFiles/blossom_detector.dir/src/util.c.o: CMakeFiles/blossom_detector.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cvdg/Desktop/test/blossom_inequality_sep/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/blossom_detector.dir/src/util.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/blossom_detector.dir/src/util.c.o -MF CMakeFiles/blossom_detector.dir/src/util.c.o.d -o CMakeFiles/blossom_detector.dir/src/util.c.o -c /home/cvdg/Desktop/test/blossom_inequality_sep/src/util.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cvdg/Desktop/TSP_test/blossom_inequality_sep/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/blossom_detector.dir/src/util.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/blossom_detector.dir/src/util.c.o -MF CMakeFiles/blossom_detector.dir/src/util.c.o.d -o CMakeFiles/blossom_detector.dir/src/util.c.o -c /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/util.c
 
 CMakeFiles/blossom_detector.dir/src/util.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/blossom_detector.dir/src/util.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cvdg/Desktop/test/blossom_inequality_sep/src/util.c > CMakeFiles/blossom_detector.dir/src/util.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/util.c > CMakeFiles/blossom_detector.dir/src/util.c.i
 
 CMakeFiles/blossom_detector.dir/src/util.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/blossom_detector.dir/src/util.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cvdg/Desktop/test/blossom_inequality_sep/src/util.c -o CMakeFiles/blossom_detector.dir/src/util.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/src/util.c -o CMakeFiles/blossom_detector.dir/src/util.c.s
 
 # Object files for target blossom_detector
 blossom_detector_OBJECTS = \
@@ -301,7 +301,7 @@ blossom_detector: CMakeFiles/blossom_detector.dir/src/cut_st.c.o
 blossom_detector: CMakeFiles/blossom_detector.dir/src/util.c.o
 blossom_detector: CMakeFiles/blossom_detector.dir/build.make
 blossom_detector: CMakeFiles/blossom_detector.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/cvdg/Desktop/test/blossom_inequality_sep/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking C executable blossom_detector"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/cvdg/Desktop/TSP_test/blossom_inequality_sep/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking C executable blossom_detector"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/blossom_detector.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -313,6 +313,6 @@ CMakeFiles/blossom_detector.dir/clean:
 .PHONY : CMakeFiles/blossom_detector.dir/clean
 
 CMakeFiles/blossom_detector.dir/depend:
-	cd /home/cvdg/Desktop/test/blossom_inequality_sep/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cvdg/Desktop/test/blossom_inequality_sep /home/cvdg/Desktop/test/blossom_inequality_sep /home/cvdg/Desktop/test/blossom_inequality_sep/build /home/cvdg/Desktop/test/blossom_inequality_sep/build /home/cvdg/Desktop/test/blossom_inequality_sep/build/CMakeFiles/blossom_detector.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cvdg/Desktop/TSP_test/blossom_inequality_sep /home/cvdg/Desktop/TSP_test/blossom_inequality_sep /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/build /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/build /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/build/CMakeFiles/blossom_detector.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/blossom_detector.dir/depend
 

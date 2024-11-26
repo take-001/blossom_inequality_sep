@@ -1,4 +1,4 @@
-# Install script for directory: /home/cvdg/Desktop/test/blossom_inequality_sep
+# Install script for directory: /home/cvdg/Desktop/TSP_test/blossom_inequality_sep
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/cvdg/Desktop/test/blossom_inequality_sep/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/cvdg/Desktop/TSP_test/blossom_inequality_sep/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

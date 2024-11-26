@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/cvdg/Desktop/test/blossom_inequality_sep/INCLUDE
+C_INCLUDES = -I/home/cvdg/Desktop/TSP_test/blossom_inequality_sep/INCLUDE
 
 C_FLAGS = -std=gnu11
 

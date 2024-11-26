@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cvdg/Desktop/test/blossom_inequality_sep
+CMAKE_SOURCE_DIR = /home/cvdg/Desktop/TSP_test/blossom_inequality_sep
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cvdg/Desktop/test/blossom_inequality_sep/build
+CMAKE_BINARY_DIR = /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cvdg/Desktop/test/blossom_inequality_sep/build/CMakeFiles /home/cvdg/Desktop/test/blossom_inequality_sep/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/build/CMakeFiles /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cvdg/Desktop/test/blossom_inequality_sep/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cvdg/Desktop/TSP_test/blossom_inequality_sep/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named blossom_separation
+
+# Build rule for target.
+blossom_separation: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 blossom_separation
+.PHONY : blossom_separation
+
+# fast build rule for target.
+blossom_separation/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/build
+.PHONY : blossom_separation/fast
+
+#=============================================================================
 # Target rules for targets named blossom_detector
 
 # Build rule for target.
@@ -134,6 +147,7 @@ blossom_detector.o: blossom_detector.c.o
 
 # target to build an object file
 blossom_detector.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/blossom_detector.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/blossom_detector.c.o
 .PHONY : blossom_detector.c.o
 
@@ -142,6 +156,7 @@ blossom_detector.i: blossom_detector.c.i
 
 # target to preprocess a source file
 blossom_detector.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/blossom_detector.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/blossom_detector.c.i
 .PHONY : blossom_detector.c.i
 
@@ -150,6 +165,7 @@ blossom_detector.s: blossom_detector.c.s
 
 # target to generate assembly for a file
 blossom_detector.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/blossom_detector.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/blossom_detector.c.s
 .PHONY : blossom_detector.c.s
 
@@ -158,6 +174,7 @@ src/allocrus.o: src/allocrus.c.o
 
 # target to build an object file
 src/allocrus.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/allocrus.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/allocrus.c.o
 .PHONY : src/allocrus.c.o
 
@@ -166,6 +183,7 @@ src/allocrus.i: src/allocrus.c.i
 
 # target to preprocess a source file
 src/allocrus.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/allocrus.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/allocrus.c.i
 .PHONY : src/allocrus.c.i
 
@@ -174,6 +192,7 @@ src/allocrus.s: src/allocrus.c.s
 
 # target to generate assembly for a file
 src/allocrus.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/allocrus.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/allocrus.c.s
 .PHONY : src/allocrus.c.s
 
@@ -182,6 +201,7 @@ src/blossom.o: src/blossom.c.o
 
 # target to build an object file
 src/blossom.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/blossom.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/blossom.c.o
 .PHONY : src/blossom.c.o
 
@@ -190,6 +210,7 @@ src/blossom.i: src/blossom.c.i
 
 # target to preprocess a source file
 src/blossom.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/blossom.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/blossom.c.i
 .PHONY : src/blossom.c.i
 
@@ -198,6 +219,7 @@ src/blossom.s: src/blossom.c.s
 
 # target to generate assembly for a file
 src/blossom.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/blossom.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/blossom.c.s
 .PHONY : src/blossom.c.s
 
@@ -206,6 +228,7 @@ src/cliqhash.o: src/cliqhash.c.o
 
 # target to build an object file
 src/cliqhash.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/cliqhash.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/cliqhash.c.o
 .PHONY : src/cliqhash.c.o
 
@@ -214,6 +237,7 @@ src/cliqhash.i: src/cliqhash.c.i
 
 # target to preprocess a source file
 src/cliqhash.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/cliqhash.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/cliqhash.c.i
 .PHONY : src/cliqhash.c.i
 
@@ -222,6 +246,7 @@ src/cliqhash.s: src/cliqhash.c.s
 
 # target to generate assembly for a file
 src/cliqhash.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/cliqhash.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/cliqhash.c.s
 .PHONY : src/cliqhash.c.s
 
@@ -230,6 +255,7 @@ src/cliqwork.o: src/cliqwork.c.o
 
 # target to build an object file
 src/cliqwork.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/cliqwork.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/cliqwork.c.o
 .PHONY : src/cliqwork.c.o
 
@@ -238,6 +264,7 @@ src/cliqwork.i: src/cliqwork.c.i
 
 # target to preprocess a source file
 src/cliqwork.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/cliqwork.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/cliqwork.c.i
 .PHONY : src/cliqwork.c.i
 
@@ -246,6 +273,7 @@ src/cliqwork.s: src/cliqwork.c.s
 
 # target to generate assembly for a file
 src/cliqwork.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/cliqwork.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/cliqwork.c.s
 .PHONY : src/cliqwork.c.s
 
@@ -254,6 +282,7 @@ src/cut_st.o: src/cut_st.c.o
 
 # target to build an object file
 src/cut_st.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/cut_st.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/cut_st.c.o
 .PHONY : src/cut_st.c.o
 
@@ -262,6 +291,7 @@ src/cut_st.i: src/cut_st.c.i
 
 # target to preprocess a source file
 src/cut_st.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/cut_st.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/cut_st.c.i
 .PHONY : src/cut_st.c.i
 
@@ -270,6 +300,7 @@ src/cut_st.s: src/cut_st.c.s
 
 # target to generate assembly for a file
 src/cut_st.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/cut_st.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/cut_st.c.s
 .PHONY : src/cut_st.c.s
 
@@ -278,6 +309,7 @@ src/cutpool.o: src/cutpool.c.o
 
 # target to build an object file
 src/cutpool.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/cutpool.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/cutpool.c.o
 .PHONY : src/cutpool.c.o
 
@@ -286,6 +318,7 @@ src/cutpool.i: src/cutpool.c.i
 
 # target to preprocess a source file
 src/cutpool.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/cutpool.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/cutpool.c.i
 .PHONY : src/cutpool.c.i
 
@@ -294,6 +327,7 @@ src/cutpool.s: src/cutpool.c.s
 
 # target to generate assembly for a file
 src/cutpool.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/cutpool.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/cutpool.c.s
 .PHONY : src/cutpool.c.s
 
@@ -302,6 +336,7 @@ src/genhash.o: src/genhash.c.o
 
 # target to build an object file
 src/genhash.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/genhash.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/genhash.c.o
 .PHONY : src/genhash.c.o
 
@@ -310,6 +345,7 @@ src/genhash.i: src/genhash.c.i
 
 # target to preprocess a source file
 src/genhash.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/genhash.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/genhash.c.i
 .PHONY : src/genhash.c.i
 
@@ -318,6 +354,7 @@ src/genhash.s: src/genhash.c.s
 
 # target to generate assembly for a file
 src/genhash.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/genhash.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/genhash.c.s
 .PHONY : src/genhash.c.s
 
@@ -326,6 +363,7 @@ src/gomoryhu.o: src/gomoryhu.c.o
 
 # target to build an object file
 src/gomoryhu.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/gomoryhu.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/gomoryhu.c.o
 .PHONY : src/gomoryhu.c.o
 
@@ -334,6 +372,7 @@ src/gomoryhu.i: src/gomoryhu.c.i
 
 # target to preprocess a source file
 src/gomoryhu.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/gomoryhu.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/gomoryhu.c.i
 .PHONY : src/gomoryhu.c.i
 
@@ -342,6 +381,7 @@ src/gomoryhu.s: src/gomoryhu.c.s
 
 # target to generate assembly for a file
 src/gomoryhu.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/gomoryhu.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/gomoryhu.c.s
 .PHONY : src/gomoryhu.c.s
 
@@ -350,6 +390,7 @@ src/safe_io.o: src/safe_io.c.o
 
 # target to build an object file
 src/safe_io.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/safe_io.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/safe_io.c.o
 .PHONY : src/safe_io.c.o
 
@@ -358,6 +399,7 @@ src/safe_io.i: src/safe_io.c.i
 
 # target to preprocess a source file
 src/safe_io.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/safe_io.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/safe_io.c.i
 .PHONY : src/safe_io.c.i
 
@@ -366,6 +408,7 @@ src/safe_io.s: src/safe_io.c.s
 
 # target to generate assembly for a file
 src/safe_io.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/safe_io.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/safe_io.c.s
 .PHONY : src/safe_io.c.s
 
@@ -374,6 +417,7 @@ src/skeleton.o: src/skeleton.c.o
 
 # target to build an object file
 src/skeleton.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/skeleton.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/skeleton.c.o
 .PHONY : src/skeleton.c.o
 
@@ -382,6 +426,7 @@ src/skeleton.i: src/skeleton.c.i
 
 # target to preprocess a source file
 src/skeleton.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/skeleton.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/skeleton.c.i
 .PHONY : src/skeleton.c.i
 
@@ -390,6 +435,7 @@ src/skeleton.s: src/skeleton.c.s
 
 # target to generate assembly for a file
 src/skeleton.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/skeleton.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/skeleton.c.s
 .PHONY : src/skeleton.c.s
 
@@ -398,6 +444,7 @@ src/sortrus.o: src/sortrus.c.o
 
 # target to build an object file
 src/sortrus.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/sortrus.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/sortrus.c.o
 .PHONY : src/sortrus.c.o
 
@@ -406,6 +453,7 @@ src/sortrus.i: src/sortrus.c.i
 
 # target to preprocess a source file
 src/sortrus.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/sortrus.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/sortrus.c.i
 .PHONY : src/sortrus.c.i
 
@@ -414,6 +462,7 @@ src/sortrus.s: src/sortrus.c.s
 
 # target to generate assembly for a file
 src/sortrus.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/sortrus.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/sortrus.c.s
 .PHONY : src/sortrus.c.s
 
@@ -422,6 +471,7 @@ src/urandom.o: src/urandom.c.o
 
 # target to build an object file
 src/urandom.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/urandom.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/urandom.c.o
 .PHONY : src/urandom.c.o
 
@@ -430,6 +480,7 @@ src/urandom.i: src/urandom.c.i
 
 # target to preprocess a source file
 src/urandom.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/urandom.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/urandom.c.i
 .PHONY : src/urandom.c.i
 
@@ -438,6 +489,7 @@ src/urandom.s: src/urandom.c.s
 
 # target to generate assembly for a file
 src/urandom.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/urandom.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/urandom.c.s
 .PHONY : src/urandom.c.s
 
@@ -446,6 +498,7 @@ src/util.o: src/util.c.o
 
 # target to build an object file
 src/util.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/util.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/util.c.o
 .PHONY : src/util.c.o
 
@@ -454,6 +507,7 @@ src/util.i: src/util.c.i
 
 # target to preprocess a source file
 src/util.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/util.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/util.c.i
 .PHONY : src/util.c.i
 
@@ -462,6 +516,7 @@ src/util.s: src/util.c.s
 
 # target to generate assembly for a file
 src/util.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_separation.dir/build.make CMakeFiles/blossom_separation.dir/src/util.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blossom_detector.dir/build.make CMakeFiles/blossom_detector.dir/src/util.c.s
 .PHONY : src/util.c.s
 
@@ -474,6 +529,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... blossom_detector"
+	@echo "... blossom_separation"
 	@echo "... blossom_detector.o"
 	@echo "... blossom_detector.i"
 	@echo "... blossom_detector.s"
